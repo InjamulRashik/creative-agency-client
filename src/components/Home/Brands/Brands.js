@@ -8,8 +8,8 @@ import uber from "../../../images/logos/uber.png";
 const Brands = () => {
   return (
     <div
-      style={{ margin: "90px 100px 0px 100px", padding: "0px 0px" }}
-      className="row d-flex justify-content-center align-items-center"
+      style={{ margin: "90px 0px 0px 100px", padding: "0px 0px" }}
+      className="row d-flex justify-content-center align-items-center mr-auto"
     >
       <div className="col-md-2 mb-5 mr-5">
         <img style={{ width: "140px" }} src={slack} alt="" />{" "}

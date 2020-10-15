@@ -13,7 +13,7 @@ const Contact = () => {
         style={{ marginBottom: "120px" }}
         className="row d-flex justify-content-between"
       >
-        <div style={{ paddingLeft: " 180px" }} className="col-md-6">
+        <div style={{ paddingLeft: " 187px" }} className="col-md-6">
           <h1>
             <b>
               Let us handle your <br /> project, professionally.
@@ -28,7 +28,7 @@ const Contact = () => {
         <div style={{ paddingLeft: " 180px" }} className="col-md-6 ">
           <input
             style={{
-              width: "385px",
+              width: "50%",
               marginBottom: "16px",
               border: "none",
               borderRadius: "5px",
@@ -43,7 +43,7 @@ const Contact = () => {
           <br />
           <input
             style={{
-              width: "385px",
+              width: "50%",
               marginBottom: "16px",
               border: "none",
               borderRadius: "5px",
@@ -58,7 +58,7 @@ const Contact = () => {
           <br />
           <input
             style={{
-              width: "385px",
+              width: "50%",
               paddingBottom: "277px",
               marginBottom: "16px",
               border: "none",

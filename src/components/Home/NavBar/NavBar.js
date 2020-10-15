@@ -14,7 +14,7 @@ const NavBar = () => {
       <nav className="navbar navbar-expand-lg navbar-light">
         <img style={{ width: "150px" }} src={logo} alt="" />
         <button
-          className="navbar-toggler"
+          className="navbar-toggler mt-3"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
