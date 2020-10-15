@@ -1,0 +1,44 @@
+.logo {
+  width: 202.81px;
+  height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 67px;
+  margin-top: 44px;
+}
+.link {
+  display: flex;
+}
+.form {
+  position: absolute;
+  width: 570px;
+  height: 457px;
+  background: #ffffff;
+  border: 1px solid #ababab;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 154px 57px 155px 56px;
+  text-align: center;
+  font-weight: bold;
+}
+.content {
+  display: flex;
+  justify-content: center;
+}
+.loginBtn {
+  width: 457px;
+  height: 51px;
+
+  background: #ffffff;
+  border: 1px solid #c7c7c7;
+  box-sizing: border-box;
+  border-radius: 57px;
+}
+.icon {
+  width: 31px;
+  height: 31.74px;
+}

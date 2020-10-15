@@ -29,7 +29,7 @@ const WorkCarousel = () => {
       </h1>{" "}
       <br />
       <div>
-        <Carousel slides={slides} autoplay={true} interval={10000} />
+        <Carousel slides={slides} autoplay={true} interval={5000} />
       </div>
     </div>
   );
