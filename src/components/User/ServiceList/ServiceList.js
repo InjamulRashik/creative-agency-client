@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import SideBar from "../../SharedComponent/SideBar/SideBar";
 import ServiceListDetails from "../ServiceListDetails/ServiceListDetails";
 import service1 from "../../../images/icons/service1.png";
@@ -8,24 +8,21 @@ import { UserContext } from "../../../App";
 
 const ServiceList = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const services = [
+  const [services, setServices] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/servicelist?email=" + loggedInUser.email)
+      .then((response) => response.json())
+      .then((data) => setServices(data));
+  }, []);
+  const serviceImages = [
     {
       img: service1,
-      name: "Web & Mobile Design",
-      details:
-        "We craft stunning and amazing web UI, using a well drrafted UX to fit your product.",
     },
     {
       img: service2,
-      name: "Graphic Design",
-      details:
-        "Amazing flyers, social media posts and brand representations that would make your brand stand out.",
     },
     {
       img: service3,
-      name: "Web Development",
-      details:
-        "With well written codes, we build amazing apps for all platforms, mobile and web apps in general.",
     },
   ];
   return (

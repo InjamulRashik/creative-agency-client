@@ -28,6 +28,7 @@ const OrderDetails = () => {
       serviceName: value,
       details: valueDetails,
       price: valuePrice,
+      status: "Pending",
     };
     fetch("http://localhost:5000/addOrder", {
       method: "POST",
@@ -36,6 +37,7 @@ const OrderDetails = () => {
       },
       body: JSON.stringify(orders),
     }).then((res) => res.json());
+    window.confirm("Order Placed Successfully!");
   };
 
   return (
@@ -88,6 +90,7 @@ const OrderDetails = () => {
           placeholder="Graphic Design"
           value={value}
           onChange={handleChange}
+          required
         />{" "}
         <br />
         <input
@@ -105,6 +108,7 @@ const OrderDetails = () => {
           placeholder="Project Details"
           value={valueDetails}
           onChange={handleChangeDetails}
+          required
         />{" "}
         <br />
         <input
@@ -121,6 +125,7 @@ const OrderDetails = () => {
           placeholder="Price"
           value={valuePrice}
           onChange={handleChangePrice}
+          required
         />
         <br />
         <button
