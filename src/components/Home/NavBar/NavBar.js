@@ -50,7 +50,7 @@ const NavBar = () => {
               <a
                 style={{ width: "130px", color: "white" }}
                 className="nav-link btn btn-dark"
-                href="/login"
+                href="/user/order"
               >
                 Login
               </a>

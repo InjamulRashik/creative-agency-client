@@ -1,9 +1,46 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
+import { UserContext } from "../../../App";
 
 const OrderDetails = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+  let history = useHistory();
+
+  const { handleSubmit } = useForm();
+  const [value, setValue] = useState("");
+  const [valueDetails, setValueDetails] = useState("");
+  const [valuePrice, setValuePrice] = useState("");
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
+  const handleChangeDetails = (e) => {
+    setValueDetails(e.target.value);
+  };
+  const handleChangePrice = (e) => {
+    setValuePrice(e.target.value);
+  };
+  const onSubmit = () => {
+    const orders = {
+      name: loggedInUser.name,
+      email: loggedInUser.email,
+      serviceName: value,
+      details: valueDetails,
+      price: valuePrice,
+    };
+    fetch("http://localhost:5000/addOrder", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(orders),
+    }).then((res) => res.json());
+  };
+
   return (
     <div style={{ marginTop: "83px" }} className="container">
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <input
           style={{
             width: "570px",
@@ -16,6 +53,7 @@ const OrderDetails = () => {
           type="text"
           name=""
           id=""
+          value={loggedInUser.name}
           placeholder="Your name / company’s name"
         />{" "}
         <br />
@@ -31,6 +69,7 @@ const OrderDetails = () => {
           type="text"
           name=""
           id=""
+          value={loggedInUser.email}
           placeholder="Your email address"
         />{" "}
         <br />
@@ -47,6 +86,8 @@ const OrderDetails = () => {
           name=""
           id=""
           placeholder="Graphic Design"
+          value={value}
+          onChange={handleChange}
         />{" "}
         <br />
         <input
@@ -62,6 +103,8 @@ const OrderDetails = () => {
           name=""
           id=""
           placeholder="Project Details"
+          value={valueDetails}
+          onChange={handleChangeDetails}
         />{" "}
         <br />
         <input
@@ -76,6 +119,8 @@ const OrderDetails = () => {
           name=""
           id=""
           placeholder="Price"
+          value={valuePrice}
+          onChange={handleChangePrice}
         />
         <br />
         <button

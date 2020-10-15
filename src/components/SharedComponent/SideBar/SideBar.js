@@ -79,7 +79,7 @@ const SideBar = () => {
             fontSize: "16px",
           }}
           onClick={() => {
-            history.push("/user/order");
+            history.push("/user/review");
           }}
           className="list-group-item list-group-item-action align-items-center textSelect  "
         >
