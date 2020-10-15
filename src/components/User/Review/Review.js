@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../../../App";
 import SideBar from "../../SharedComponent/SideBar/SideBar";
 import ReviewDetails from "../ReviewDetails/ReviewDetails";
 
 const Review = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   return (
     <div className="d-flex" id="wrapper">
       <SideBar></SideBar>
@@ -27,7 +29,7 @@ const Review = () => {
                   }}
                   className=" btn btn-primary"
                 >
-                  Back to Home <span class="sr-only">(current)</span>
+                  {loggedInUser.name} <span class="sr-only">(current)</span>
                 </button>
               </li>
             </ul>

@@ -4,9 +4,9 @@ import Home from "./components/Home/Home/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
 import Order from "./components/User/Order/Order";
-import SideBar from "./components/SharedComponent/SideBar/SideBar";
 import Review from "./components/User/Review/Review";
 import ServiceList from "./components/User/ServiceList/ServiceList";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 export const UserContext = createContext();
 
@@ -22,9 +22,9 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/user/order">
+          <PrivateRoute path="/user/order">
             <Order />
-          </Route>
+          </PrivateRoute>
           <Route path="/user/servicelist">
             <ServiceList />
           </Route>

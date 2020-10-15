@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import logo from "../../../images/logos/logo.png";
 import Order from "../../User/Order/Order";
 import Review from "../../User/Review/Review";
@@ -6,14 +7,17 @@ import ServiceList from "../../User/ServiceList/ServiceList";
 import "./SideBar.css";
 
 const SideBar = () => {
+  let history = useHistory();
   return (
     <div className=" border-0" id="sidebar-wrapper">
       <div className="sidebar-heading">
         <img src={logo} style={{ width: "202px", height: "60px" }} alt="" />{" "}
       </div>
       <div className="list-group list-group-flush">
-        <a
-          href="/user/order"
+        <p
+          onClick={() => {
+            history.push("/user/order");
+          }}
           style={{
             fontWeight: "normal",
             fontSize: "16px",
@@ -36,13 +40,15 @@ const SideBar = () => {
             </svg>
           </span>{" "}
           Order
-        </a>
-        <a
+        </p>
+        <p
           style={{
             fontWeight: "normal",
             fontSize: "16px",
           }}
-          href="/user/servicelist"
+          onClick={() => {
+            history.push("/user/servicelist");
+          }}
           className="list-group-item list-group-item-action align-items-center textSelect  "
         >
           <span>
@@ -66,13 +72,15 @@ const SideBar = () => {
             </svg>
           </span>{" "}
           Service List
-        </a>
-        <a
+        </p>
+        <p
           style={{
             fontWeight: "normal",
             fontSize: "16px",
           }}
-          href="/user/review"
+          onClick={() => {
+            history.push("/user/order");
+          }}
           className="list-group-item list-group-item-action align-items-center textSelect  "
         >
           <span>
@@ -92,7 +100,7 @@ const SideBar = () => {
             </svg>
           </span>{" "}
           Review
-        </a>
+        </p>
       </div>
     </div>
   );

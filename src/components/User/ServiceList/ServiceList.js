@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import SideBar from "../../SharedComponent/SideBar/SideBar";
 import ServiceListDetails from "../ServiceListDetails/ServiceListDetails";
 import service1 from "../../../images/icons/service1.png";
 import service2 from "../../../images/icons/service2.png";
 import service3 from "../../../images/icons/service3.png";
+import { UserContext } from "../../../App";
 
 const ServiceList = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const services = [
     {
       img: service1,
@@ -50,7 +52,7 @@ const ServiceList = () => {
                   }}
                   className=" btn btn-primary"
                 >
-                  Back to Home <span class="sr-only">(current)</span>
+                  {loggedInUser.name} <span class="sr-only">(current)</span>
                 </button>
               </li>
             </ul>
