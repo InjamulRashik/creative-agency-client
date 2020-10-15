@@ -5,6 +5,7 @@ const NavBar = () => {
   return (
     <div
       style={{
+        paddingTop: "20px",
         paddingLeft: "137px",
         paddingRight: "137px",
         backgroundColor: "#FBD062",
@@ -49,7 +50,7 @@ const NavBar = () => {
               <a
                 style={{ width: "130px", color: "white" }}
                 className="nav-link btn btn-dark"
-                href="#."
+                href="/login"
               >
                 Login
               </a>
