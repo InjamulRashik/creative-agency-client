@@ -1,5 +1,6 @@
 import React from "react";
 import SideBar from "../../SharedComponent/SideBar/SideBar";
+import OrderDetails from "../OrderDetails/OrderDetails";
 
 const Order = () => {
   return (
@@ -32,6 +33,7 @@ const Order = () => {
             </ul>
           </div>
         </nav>
+        <OrderDetails></OrderDetails>
       </div>
     </div>
   );

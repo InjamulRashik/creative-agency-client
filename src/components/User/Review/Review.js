@@ -1,5 +1,6 @@
 import React from "react";
 import SideBar from "../../SharedComponent/SideBar/SideBar";
+import ReviewDetails from "../ReviewDetails/ReviewDetails";
 
 const Review = () => {
   return (
@@ -32,6 +33,7 @@ const Review = () => {
             </ul>
           </div>
         </nav>
+        <ReviewDetails></ReviewDetails>
       </div>
     </div>
   );

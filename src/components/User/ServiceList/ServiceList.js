@@ -1,7 +1,31 @@
 import React from "react";
 import SideBar from "../../SharedComponent/SideBar/SideBar";
+import ServiceListDetails from "../ServiceListDetails/ServiceListDetails";
+import service1 from "../../../images/icons/service1.png";
+import service2 from "../../../images/icons/service2.png";
+import service3 from "../../../images/icons/service3.png";
 
 const ServiceList = () => {
+  const services = [
+    {
+      img: service1,
+      name: "Web & Mobile Design",
+      details:
+        "We craft stunning and amazing web UI, using a well drrafted UX to fit your product.",
+    },
+    {
+      img: service2,
+      name: "Graphic Design",
+      details:
+        "Amazing flyers, social media posts and brand representations that would make your brand stand out.",
+    },
+    {
+      img: service3,
+      name: "Web Development",
+      details:
+        "With well written codes, we build amazing apps for all platforms, mobile and web apps in general.",
+    },
+  ];
   return (
     <div className="d-flex" id="wrapper">
       <SideBar></SideBar>
@@ -32,6 +56,13 @@ const ServiceList = () => {
             </ul>
           </div>
         </nav>
+        <div className="container">
+          <div className="row">
+            {services.map((service) => (
+              <ServiceListDetails service={service}></ServiceListDetails>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
