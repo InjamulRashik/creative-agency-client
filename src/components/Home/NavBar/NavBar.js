@@ -3,7 +3,13 @@ import logo from "../../../logo.png";
 
 const NavBar = () => {
   return (
-    <div style={{ paddingLeft: "137px", paddingRight: "137px" }}>
+    <div
+      style={{
+        paddingLeft: "137px",
+        paddingRight: "137px",
+        backgroundColor: "#FBD062",
+      }}
+    >
       <nav className="navbar navbar-expand-lg navbar-light">
         <img style={{ width: "150px" }} src={logo} alt="" />
         <button

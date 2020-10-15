@@ -1,0 +1,7 @@
+.main-content {
+  background-image: url(../../../images/homeBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  margin: auto;
+}

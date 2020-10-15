@@ -1,11 +1,12 @@
 import React from "react";
 import frame from "../../../images/logos/Frame.png";
+import "./HeaderContent.css";
 
 const HeaderContent = () => {
   return (
     <main
-      style={{ height: "905px " }}
-      className="d-flex align-items-center row"
+      style={{ height: "908px " }}
+      className="d-flex align-items-center row main-content"
     >
       <div className="col-md-4 offset-md-1 ">
         <h1 style={{ fontSize: "48px" }}>
@@ -14,7 +15,7 @@ const HeaderContent = () => {
           </span>
         </h1>{" "}
         <br />
-        <p style={{ marginBottom: "10px", width: " 100%" }}>
+        <p style={{ marginBottom: "10px" }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo
           ipsum duis laoreet maecenas. Feugiat
         </p>{" "}
