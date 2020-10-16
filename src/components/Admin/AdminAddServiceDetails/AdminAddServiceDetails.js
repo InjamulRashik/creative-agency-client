@@ -72,7 +72,7 @@ const AdminAddServiceDetails = () => {
           type="text"
           name="description"
           id=""
-          placeholder="Enter Designation"
+          placeholder="Enter Description"
           required
         />{" "}
         <br />
