@@ -5,7 +5,7 @@ import AdminServiceListTable from "../AdminServiceListTable/AdminServiceListTabl
 const AdminServiceList = () => {
   const [serviceLists, setServiceLists] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/servicelist")
+    fetch("http://localhost:5000/allServicelist")
       .then((response) => response.json())
       .then((data) => setServiceLists(data));
   }, []);
