@@ -1,30 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ServiceDetails from "../ServiceDetails/ServiceDetails";
 import service1 from "../../../images/icons/service1.png";
 import service2 from "../../../images/icons/service2.png";
 import service3 from "../../../images/icons/service3.png";
 
 const Service = () => {
-  const services = [
-    {
-      img: service1,
-      name: "Web & Mobile Design",
-      details:
-        "We craft stunning and amazing web UI, using a well drrafted UX to fit your product.",
-    },
-    {
-      img: service2,
-      name: "Graphic Design",
-      details:
-        "Amazing flyers, social media posts and brand representations that would make your brand stand out.",
-    },
-    {
-      img: service3,
-      name: "Web Development",
-      details:
-        "With well written codes, we build amazing apps for all platforms, mobile and web apps in general.",
-    },
-  ];
+  const [services, setServices] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/services")
+      .then((response) => response.json())
+      .then((data) => setServices(data));
+  }, []);
   return (
     <div>
       <div style={{ textAlign: "center", marginTop: "100px" }} className="">
