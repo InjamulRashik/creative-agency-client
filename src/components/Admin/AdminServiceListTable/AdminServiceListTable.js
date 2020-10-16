@@ -5,7 +5,7 @@ const AdminServiceListTable = (props) => {
   const statuses = ["Pending", "On Going", "Done"];
   const handleChange = (e) => {
     const data = { id: e.target.name, status: e.target.value };
-    fetch("http://localhost:5000/updateOrder", {
+    fetch("https://calm-mesa-41690.herokuapp.com/updateOrder", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

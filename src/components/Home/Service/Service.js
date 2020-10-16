@@ -7,7 +7,7 @@ import service3 from "../../../images/icons/service3.png";
 const Service = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://calm-mesa-41690.herokuapp.com/services")
       .then((response) => response.json())
       .then((data) => {
         setServices(data);

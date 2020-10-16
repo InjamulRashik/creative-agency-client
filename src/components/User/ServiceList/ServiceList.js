@@ -10,7 +10,10 @@ const ServiceList = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/servicelist?email=" + loggedInUser.email)
+    fetch(
+      "https://calm-mesa-41690.herokuapp.com/servicelist?email=" +
+        loggedInUser.email
+    )
       .then((response) => response.json())
       .then((data) => setServices(data));
   }, []);

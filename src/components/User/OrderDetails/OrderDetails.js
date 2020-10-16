@@ -30,7 +30,7 @@ const OrderDetails = () => {
       price: valuePrice,
       status: "Pending",
     };
-    fetch("http://localhost:5000/addOrder", {
+    fetch("https://calm-mesa-41690.herokuapp.com/addOrder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

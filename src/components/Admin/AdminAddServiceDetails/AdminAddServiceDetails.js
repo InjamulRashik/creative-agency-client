@@ -18,7 +18,7 @@ const AdminAddServiceDetails = () => {
     formData.append("name", info.name);
     formData.append("description", info.description);
 
-    fetch("http://localhost:5000/addService", {
+    fetch("https://calm-mesa-41690.herokuapp.com/addService", {
       method: "POST",
       body: formData,
     })

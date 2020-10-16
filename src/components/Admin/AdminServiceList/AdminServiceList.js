@@ -5,7 +5,7 @@ import AdminServiceListTable from "../AdminServiceListTable/AdminServiceListTabl
 const AdminServiceList = () => {
   const [serviceLists, setServiceLists] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/allServicelist")
+    fetch("https://calm-mesa-41690.herokuapp.com/allServicelist")
       .then((response) => response.json())
       .then((data) => setServiceLists(data));
   }, []);
