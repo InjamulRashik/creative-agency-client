@@ -7,6 +7,9 @@ import Order from "./components/User/Order/Order";
 import Review from "./components/User/Review/Review";
 import ServiceList from "./components/User/ServiceList/ServiceList";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import AdminServiceList from "./components/Admin/AdminServiceList/AdminServiceList";
+import AdminAddService from "./components/Admin/AdminAddService/AdminAddService";
+import AdminMake from "./components/Admin/AdminMake/AdminMake";
 
 export const UserContext = createContext();
 
@@ -30,6 +33,15 @@ function App() {
           </Route>
           <Route path="/user/review">
             <Review />
+          </Route>
+          <Route path="/admin/servicelist">
+            <AdminServiceList />
+          </Route>
+          <Route path="/admin/addservice">
+            <AdminAddService />
+          </Route>
+          <Route path="/admin/makeadmin">
+            <AdminMake />
           </Route>
         </Switch>
       </Router>
