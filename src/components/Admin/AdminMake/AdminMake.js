@@ -1,5 +1,6 @@
 import React from "react";
 import SideBarAdmin from "../../SharedComponent/SideBar/SideBarAdmin";
+import AdminMakeDetails from "../AdminMakeDetails/AdminMakeDetails";
 
 const AdminMake = () => {
   return (
@@ -47,6 +48,7 @@ const AdminMake = () => {
             </ul>
           </div>
         </nav>
+        <AdminMakeDetails></AdminMakeDetails>
       </div>
     </div>
   );

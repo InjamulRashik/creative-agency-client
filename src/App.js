@@ -10,6 +10,7 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import AdminServiceList from "./components/Admin/AdminServiceList/AdminServiceList";
 import AdminAddService from "./components/Admin/AdminAddService/AdminAddService";
 import AdminMake from "./components/Admin/AdminMake/AdminMake";
+import AlternateLogin from "./components/AlternateLogin/AlternateLogin";
 
 export const UserContext = createContext();
 
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/alternatelogin">
+            <AlternateLogin />
           </Route>
           <PrivateRoute path="/user/order">
             <Order />

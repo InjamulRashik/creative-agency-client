@@ -1,5 +1,6 @@
 import React from "react";
 import SideBarAdmin from "../../SharedComponent/SideBar/SideBarAdmin";
+import AdminAddServiceDetails from "../AdminAddServiceDetails/AdminAddServiceDetails";
 
 const AdminAddService = () => {
   return (
@@ -47,6 +48,7 @@ const AdminAddService = () => {
             </ul>
           </div>
         </nav>
+        <AdminAddServiceDetails></AdminAddServiceDetails>
       </div>
     </div>
   );
