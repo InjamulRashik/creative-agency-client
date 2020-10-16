@@ -1,7 +1,8 @@
 import React from "react";
+import img from "../../../images/avatar.png";
 
 const ClientDetails = (props) => {
-  const { img, name, designation, description } = props.client;
+  const { name, companyName, description } = props.client;
   return (
     <React.Fragment>
       <div
@@ -22,6 +23,7 @@ const ClientDetails = (props) => {
               width: "74px",
               marginBottom: "30px",
               marginRight: "30px",
+              marginTop: "10px",
             }}
             src={img}
             alt=""
@@ -31,7 +33,7 @@ const ClientDetails = (props) => {
             <h4>
               <b>{name}</b>
             </h4>{" "}
-            <h5>{designation}</h5>
+            <h5>{companyName}</h5>
           </div>
         </div>
         <br />

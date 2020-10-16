@@ -1,33 +1,13 @@
-import React from "react";
-import client1 from "../../../images/customer-1.png";
-import client2 from "../../../images/customer-2.png";
-import client3 from "../../../images/customer-3.png";
+import React, { useEffect, useState } from "react";
 import ClientDetails from "../ClientDetails/ClientDetails";
 
 const Client = () => {
-  const clients = [
-    {
-      img: client1,
-      name: "Nash Patrik",
-      designation: "CEO, Manpol",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat ",
-    },
-    {
-      img: client2,
-      name: "Miriam Barron",
-      designation: "CEO, Manpol",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat ",
-    },
-    {
-      img: client3,
-      name: "Bria Malone",
-      designation: "CEO, Manpol",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat ",
-    },
-  ];
+  const [clients, setClients] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/reviews")
+      .then((response) => response.json())
+      .then((data) => setClients(data));
+  }, []);
   return (
     <section>
       <div>

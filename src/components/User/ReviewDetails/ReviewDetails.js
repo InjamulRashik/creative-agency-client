@@ -1,9 +1,44 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
+import { UserContext } from "../../../App";
 
 const ReviewDetails = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+  let history = useHistory();
+
+  const { handleSubmit } = useForm();
+  const [value, setValue] = useState("");
+  const [valueCompany, setValueCompany] = useState("");
+  const [valueDescription, setValueDescription] = useState("");
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
+  const handleChangeCompany = (e) => {
+    setValueCompany(e.target.value);
+  };
+  const handleChangeDescription = (e) => {
+    setValueDescription(e.target.value);
+  };
+  const onSubmit = () => {
+    const reviews = {
+      name: value,
+      companyName: valueCompany,
+      description: valueDescription,
+    };
+    fetch("http://localhost:5000/addReview", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(reviews),
+    }).then((res) => res.json());
+    window.confirm("Review Given Successfully!");
+  };
   return (
     <div style={{ marginTop: "83px" }} className="container">
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <input
           style={{
             width: "570px",
@@ -17,6 +52,8 @@ const ReviewDetails = () => {
           name=""
           id=""
           placeholder="Your name"
+          value={value}
+          onChange={handleChange}
         />{" "}
         <br />
         <input
@@ -32,6 +69,8 @@ const ReviewDetails = () => {
           name=""
           id=""
           placeholder="Company’s name, Designation"
+          value={valueCompany}
+          onChange={handleChangeCompany}
         />{" "}
         <br />
         <input
@@ -47,10 +86,13 @@ const ReviewDetails = () => {
           name=""
           id=""
           placeholder="Description"
+          value={valueDescription}
+          onChange={handleChangeDescription}
         />{" "}
         <br />
         <br />
         <button
+          type="submit"
           className="btn"
           style={{
             width: "170px",
