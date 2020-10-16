@@ -11,9 +11,11 @@ const ServiceDetails = (props) => {
           window.location.href = `/user/order`;
         }}
         style={{ textAlign: "center", padding: "34px 38px 39px 50px" }}
-        className="col-md-4 services"
+        className="col-md-4 services slide-fwd-center"
+        id="serviceDiv"
       >
         <img
+          className="imgStyle"
           style={{ width: "74px", marginBottom: "30px" }}
           src={`data:image/png;base64,${image.img}`}
           alt=""
