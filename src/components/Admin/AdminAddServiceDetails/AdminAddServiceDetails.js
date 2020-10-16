@@ -12,7 +12,7 @@ const AdminAddServiceDetails = () => {
     const newFile = e.target.files[0];
     setFile(newFile);
   };
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     const formData = new FormData();
     formData.append("file", file);
     formData.append("name", info.name);
@@ -29,7 +29,9 @@ const AdminAddServiceDetails = () => {
       .catch((error) => {
         console.error(error);
       });
-    window.location = window.location.href.split("?")[0];
+
+    e.preventDefault();
+    window.confirm("Service Added Successfully!");
   };
   return (
     <div style={{ marginTop: "83px" }} className="container">

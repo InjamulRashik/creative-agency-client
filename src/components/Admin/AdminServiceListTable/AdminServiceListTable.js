@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 const AdminServiceListTable = (props) => {
-  const { name, email, serviceName, details, status } = props.serviceList;
+  const { _id, name, email, serviceName, details, status } = props.serviceList;
+  const statuses = ["Pending", "On Going", "Done"];
+  const handleChange = (e) => {
+    const data = { id: e.target.name, status: e.target.value };
+    fetch("http://localhost:5000/updateOrder", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {});
+  };
+
   return (
     <React.Fragment>
       <tr>
@@ -10,7 +22,21 @@ const AdminServiceListTable = (props) => {
         <td>{serviceName}</td>
         <td>{details}</td>
         <td>
-          <button className="btn btn-danger">{status}</button>
+          <select
+            className="btn btn-primary"
+            onChange={handleChange}
+            name={_id}
+            id=""
+          >
+            <option value={status}>{status}</option>
+            {statuses
+              .filter((st) => statuses !== st)
+              .map((st) => (
+                <option key={st} value={st}>
+                  {st}
+                </option>
+              ))}
+          </select>
         </td>
       </tr>
     </React.Fragment>
