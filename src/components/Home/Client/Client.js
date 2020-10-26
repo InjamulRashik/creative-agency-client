@@ -14,7 +14,7 @@ const Client = () => {
         <div style={{ textAlign: "center", marginTop: "100px" }} className="">
           <h1>
             <b>
-              Provide awesome <span style={{ color: "#7AB259" }}>services</span>
+              Clients <span style={{ color: "#7AB259" }}>Feedback</span>
             </b>
           </h1>
         </div>
