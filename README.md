@@ -2,7 +2,8 @@
 
 Live link : [Creative Agency](https://creative-agency-mihr.web.app/) | [Server Link](https://github.com/InjamulRashik/creative-agency-server)
 
-**This is a fullstack website to take various services**
+**This is a fullstack website to take various services** <br />
+**`Functionalities`**
 
 - User takes services from the homepage and also via logging in
 - User can give reviews which appear on the homepage later on
