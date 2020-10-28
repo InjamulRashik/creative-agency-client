@@ -2,7 +2,12 @@
 
 Live link : [Creative Agency](https://creative-agency-mihr.web.app/) | [Server Link](https://github.com/InjamulRashik/creative-agency-server)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**This is a fullstack website to take various services**
+
+- User takes services from the homepage and also via logging in
+- User can give reviews which appear on the homepage later on
+- Admin can access data of every user in a table form
+- Admin can update the state of pending services
 
 ## Available Scripts
 
