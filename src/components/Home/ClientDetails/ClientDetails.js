@@ -6,40 +6,26 @@ const ClientDetails = (props) => {
   return (
     <React.Fragment>
       <div
-        style={{
-          padding: "34px 0px 39px 20px",
-          boxSizing: "border-box",
-          borderRadius: "4px",
-          marginBottom: "5px",
-        }}
-        className="col-md-4"
+        className="mb-2 col-md-4 "
+        style={{ border: "1px solid black", borderRadius: "4px" }}
       >
-        <div
-          style={{ paddingLeft: "10px" }}
-          className="row d-flex align-items-center"
-        >
-          <img
-            style={{
-              width: "74px",
-              marginBottom: "30px",
-              marginRight: "30px",
-              marginTop: "10px",
-            }}
-            src={img}
-            alt=""
-          />
+        <div className="d-flex align-items-center mt-3">
           <div>
-            {" "}
-            <h4>
-              <b>{name}</b>
-            </h4>{" "}
-            <h5>{companyName}</h5>
+            <img
+              style={{ marginRight: "10px" }}
+              src={img}
+              height="70px"
+              alt=""
+            />
           </div>
-        </div>
+          <div>
+            <h5>{name}</h5> <h5>{companyName}</h5>
+          </div>{" "}
+        </div>{" "}
         <br />
-        <p style={{ wordWrap: "break-word" }} className="text-secondary">
-          {description}
-        </p>
+        <div>
+          <p className="text-wrap">{description}</p>
+        </div>
       </div>
     </React.Fragment>
   );

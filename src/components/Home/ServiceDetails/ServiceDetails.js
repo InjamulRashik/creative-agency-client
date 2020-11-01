@@ -20,7 +20,7 @@ const ServiceDetails = (props) => {
           src={`data:image/png;base64,${image.img}`}
           alt=""
         />
-        <h4>
+        <h4 className="text-center">
           <b>{name}</b>
         </h4>{" "}
         <br />

@@ -1,7 +1,29 @@
-.main-content {
+/* .main-content {
   background-image: url(../../../images/homeBg.png);
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
   margin: auto;
+} */
+.h1-top {
+  font-family: Poppins;
+  font-size: 48px;
+  line-height: 60px;
+  /* or 125% */
+
+  letter-spacing: 0.01em;
+
+  color: #111430;
+}
+.p-top {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  letter-spacing: 0.005em;
+
+  color: #000000;
 }

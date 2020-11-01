@@ -1,86 +1,68 @@
 import React from "react";
+import "./Contact.css";
 
 const Contact = () => {
   return (
-    <section
-      style={{
-        background: "#FBD062",
-        paddingTop: " 62px",
-        paddingBottom: "40px",
-      }}
-    >
-      <div
-        style={{ marginBottom: "120px" }}
-        className="row d-flex justify-content-between"
-      >
-        <div style={{ paddingLeft: " 187px" }} className="col-md-6">
-          <h1>
-            <b>
-              Let us handle your <br /> project, professionally.
-            </b>
-          </h1>{" "}
-          <br />
-          <p className="text-secondary">
-            With well written codes, we build amazing apps for all <br />{" "}
-            platforms, mobile and web apps in general.
-          </p>
+    <React.Fragment>
+      <section style={{ background: "#FBD062" }}>
+        <div className="container" style={{ background: "#FBD062" }}>
+          <div
+            className="d-flex justify-content-around
+        row pt-5"
+          >
+            <div className="col-md-4 offset-md-1 pl-4">
+              <h1>
+                <b>
+                  Let us handle your <br /> project, professionally.
+                </b>
+              </h1>{" "}
+              <br />
+              <p className="text-secondary">
+                With well written codes, we build amazing apps for all
+                platforms, mobile and web apps in general.
+              </p>
+            </div>
+            <div className="col-md-6 pl-4 pr-4">
+              <form>
+                <input
+                  style={{ height: "70px" }}
+                  className="input-contact  form-control"
+                  type="text"
+                  placeholder="Your email address"
+                />{" "}
+                <br />
+                <input
+                  style={{ height: "70px" }}
+                  className="input-contact form-control"
+                  type="text"
+                  placeholder="Your name / company’s name"
+                />{" "}
+                <br />
+                <textarea
+                  style={{ height: "277px" }}
+                  className="input-contact form-control pb-5"
+                  type="text"
+                  placeholder="Your message"
+                />{" "}
+                <br />
+                <button
+                  className="btn btn-dark"
+                  style={{ width: " 170px", height: "45px" }}
+                >
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
+          <footer
+            style={{ paddingTop: "120px" }}
+            className="text-center text-secondary"
+          >
+            copyright Orange labs 2020
+          </footer>
         </div>
-        <div style={{ paddingLeft: " 180px" }} className="col-md-6 ">
-          <input
-            style={{
-              width: "50%",
-              marginBottom: "16px",
-              border: "none",
-              borderRadius: "5px",
-              height: "70px",
-              paddingLeft: "30px",
-            }}
-            type="text"
-            name=""
-            id=""
-            placeholder="Your email address"
-          />{" "}
-          <br />
-          <input
-            style={{
-              width: "50%",
-              marginBottom: "16px",
-              border: "none",
-              borderRadius: "5px",
-              height: "70px",
-              paddingLeft: "30px",
-            }}
-            type="text"
-            name=""
-            id=""
-            placeholder="Your name / company’s name"
-          />{" "}
-          <br />
-          <input
-            style={{
-              width: "50%",
-              paddingBottom: "277px",
-              marginBottom: "16px",
-              border: "none",
-              borderRadius: "5px",
-              paddingLeft: "30px",
-              paddingTop: "30px",
-            }}
-            type="text"
-            name=""
-            id=""
-            placeholder="Your message"
-          />{" "}
-          <br />
-          <button style={{ width: "170px" }} className="btn btn-dark">
-            Send
-          </button>
-        </div>
-      </div>
-      <footer className="text-secondary" style={{ textAlign: "center" }}>
-        copyright Orange labs 2020
-      </footer>
-    </section>
+      </section>
+    </React.Fragment>
   );
 };
 

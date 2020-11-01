@@ -9,25 +9,25 @@ const Client = () => {
       .then((data) => setClients(data));
   }, []);
   return (
-    <section>
-      <div>
-        <div style={{ textAlign: "center", marginTop: "100px" }} className="">
-          <h1>
-            <b>
-              Clients <span style={{ color: "#7AB259" }}>Feedback</span>
-            </b>
-          </h1>
-        </div>
-        <div
-          style={{
-            padding: "0px 100px 0 150px",
-            marginTop: "77px",
-            marginBottom: "114px",
-          }}
-          className="row"
-        >
+    <section className="mb-5">
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: "100px",
+        }}
+        className=""
+      >
+        <h1>
+          <b>
+            Clients <span style={{ color: "#7AB259" }}>Feedback</span>
+          </b>
+        </h1>
+      </div>{" "}
+      <br />
+      <div className="container-fluid mt-5">
+        <div className="row">
           {clients.map((client) => (
-            <ClientDetails client={client}></ClientDetails>
+            <ClientDetails client={client} />
           ))}
         </div>
       </div>

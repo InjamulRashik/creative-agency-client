@@ -8,7 +8,7 @@ const NavBar = () => {
         paddingTop: "20px",
         paddingLeft: "137px",
         paddingRight: "137px",
-        backgroundColor: "#FBD062",
+        //backgroundColor: "#FBD062",
       }}
     >
       <nav className="navbar navbar-expand-lg navbar-light">

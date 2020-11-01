@@ -22,17 +22,19 @@ const Service = () => {
           </b>
         </h1>
       </div>
-      <div
-        style={{
-          padding: "0px 100px 0 100px",
-          marginTop: "77px",
-          marginBottom: "114px",
-        }}
-        className="row"
-      >
-        {services.map((service) => (
-          <ServiceDetails service={service}></ServiceDetails>
-        ))}
+      <div className="container-fluid">
+        <div
+          style={{
+            padding: "0px 100px 0 100px",
+            marginTop: "77px",
+            marginBottom: "114px",
+          }}
+          className="row"
+        >
+          {services.map((service) => (
+            <ServiceDetails service={service}></ServiceDetails>
+          ))}
+        </div>
       </div>
     </div>
   );
