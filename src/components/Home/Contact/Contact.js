@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <React.Fragment>
       <section style={{ background: "#FBD062" }}>
-        <div className="container" style={{ background: "#FBD062" }}>
+        <div className="container-fluid" style={{ background: "#FBD062" }}>
           <div
             className="d-flex justify-content-around
         row pt-5"

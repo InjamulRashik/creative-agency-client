@@ -49,12 +49,6 @@ const Login = () => {
             <b>Continue with Google</b>
           </button>{" "}
           <br />
-          <p>
-            Don't have an account?{" "}
-            <span>
-              <a href="#link">Create an account</a>
-            </span>{" "}
-          </p>
         </div>
       </div>
     </div>

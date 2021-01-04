@@ -3,15 +3,26 @@ import ServiceDetails from "../ServiceDetails/ServiceDetails";
 import service1 from "../../../images/icons/service1.png";
 import service2 from "../../../images/icons/service2.png";
 import service3 from "../../../images/icons/service3.png";
+import { trackPromise } from "react-promise-tracker";
+import { usePromiseTracker } from "react-promise-tracker";
+import PropagateLoader from "react-spinners/PropagateLoader";
+import { css } from "@emotion/core";
+
+const override = css``;
 
 const Service = () => {
+  const { promiseInProgress } = usePromiseTracker();
   const [services, setServices] = useState([]);
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("#F8DC1C");
   useEffect(() => {
-    fetch("https://calm-mesa-41690.herokuapp.com/services")
-      .then((response) => response.json())
-      .then((data) => {
-        setServices(data);
-      });
+    trackPromise(
+      fetch("https://calm-mesa-41690.herokuapp.com/services")
+        .then((response) => response.json())
+        .then((data) => {
+          setServices(data);
+        })
+    );
   }, []);
   return (
     <div>
@@ -31,9 +42,24 @@ const Service = () => {
           }}
           className="row"
         >
-          {services.map((service) => (
-            <ServiceDetails service={service}></ServiceDetails>
-          ))}
+          {promiseInProgress === true ? (
+            <div className="container">
+              <div className="row d-flex justify-content-center align-items-center">
+                <div className="">
+                  <PropagateLoader
+                    color={color}
+                    loading={loading}
+                    size={15}
+                    css={override}
+                  ></PropagateLoader>
+                </div>
+              </div>
+            </div>
+          ) : (
+            services.map((service) => (
+              <ServiceDetails service={service}></ServiceDetails>
+            ))
+          )}
         </div>
       </div>
     </div>

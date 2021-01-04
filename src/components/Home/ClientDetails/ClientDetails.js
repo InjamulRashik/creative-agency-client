@@ -7,7 +7,7 @@ const ClientDetails = (props) => {
     <React.Fragment>
       <div
         className="mb-2 col-md-4 "
-        style={{ border: "1px solid black", borderRadius: "4px" }}
+        style={{ borderRight: "1px solid lightgray" }}
       >
         <div className="d-flex align-items-center mt-3">
           <div>
@@ -19,7 +19,10 @@ const ClientDetails = (props) => {
             />
           </div>
           <div>
-            <h5>{name}</h5> <h5>{companyName}</h5>
+            <h5>
+              <b>{name}</b>
+            </h5>{" "}
+            <h6>{companyName}</h6>
           </div>{" "}
         </div>{" "}
         <br />

@@ -4,11 +4,9 @@ import logo from "../../../logo.png";
 const NavBar = () => {
   return (
     <div
+      className="container-fluid"
       style={{
         paddingTop: "20px",
-        paddingLeft: "137px",
-        paddingRight: "137px",
-        //backgroundColor: "#FBD062",
       }}
     >
       <nav className="navbar navbar-expand-lg navbar-light">
